@@ -1,8 +1,6 @@
 package com.data.hr.dto;
 
-import org.springframework.data.relational.core.mapping.Table;
 
-@Table("jobs")
 public class Job {
     private String job_id;
     private String job_title;

@@ -1,8 +1,6 @@
 package com.data.hr.dto;
 
-import org.springframework.data.relational.core.mapping.Table;
 
-@Table("locations")
 public class Location {
     private Integer location_id;
     private String street_address;

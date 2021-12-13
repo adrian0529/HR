@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/hr")
 public class ControllerEmployee {
     @Autowired
     ServiceEmployee serviceEmployee;
@@ -22,7 +23,7 @@ public class ControllerEmployee {
         return serviceEmployee.update(employee);
     }
 
-    @PostMapping("/employee/{id}")
+    @GetMapping("/employee/{id}")
     public Employee getEmployee(@PathVariable("id") int employee_id){
         return serviceEmployee.getById(employee_id);
     }
@@ -32,7 +33,7 @@ public class ControllerEmployee {
         return serviceEmployee.delete(employee_id);
     }
 
-    @PostMapping("/employees")
+    @GetMapping("/employees")
     public List<Employee> getEmployees(){
         return serviceEmployee.allEmployees();
     }

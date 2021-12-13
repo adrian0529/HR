@@ -1,8 +1,6 @@
 package com.data.hr.dto;
 
-import org.springframework.data.relational.core.mapping.Table;
 
-@Table("departments")
 public class Department {
     private Integer department_id;
     private String department_name;

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/hr")
 public class ControllerDepartment {
 
     @Autowired
@@ -23,7 +24,7 @@ public class ControllerDepartment {
         return serviceDepartment.update(department);
     }
 
-    @PostMapping("/department/{id}")
+    @GetMapping("/department/{id}")
     public Department getDepartment(@PathVariable("id") int department_id){
         return serviceDepartment.getById(department_id);
     }
@@ -33,7 +34,7 @@ public class ControllerDepartment {
         return serviceDepartment.delete(department_id);
     }
 
-    @PostMapping("/departments")
+    @GetMapping("/departments")
     public List<Department> getDepartments(){
         return serviceDepartment.allDepartments();
     }

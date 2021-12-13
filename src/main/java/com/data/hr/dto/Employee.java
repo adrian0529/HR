@@ -1,10 +1,8 @@
 package com.data.hr.dto;
 
-import org.springframework.data.relational.core.mapping.Table;
 
 import java.util.Date;
 
-@Table("employees")
 public class Employee {
     private Integer employee_id;
     private String first_name;

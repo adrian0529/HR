@@ -1,8 +1,6 @@
 package com.data.hr.dto;
 
-import org.springframework.data.relational.core.mapping.Table;
 
-@Table("countries")
 public class Country {
     private String country_id;
     private String country_name;

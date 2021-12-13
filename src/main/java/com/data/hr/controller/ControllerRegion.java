@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/hr")
 public class ControllerRegion {
 
     @Autowired
@@ -23,7 +24,7 @@ public class ControllerRegion {
         return serviceRegion.update(region);
     }
 
-    @PostMapping("region/{id}")
+    @GetMapping("region/{id}")
     public Region getRegion(@PathVariable("id") int region_id){
         return serviceRegion.getById(region_id);
     }
@@ -33,7 +34,7 @@ public class ControllerRegion {
         return serviceRegion.delete(region_id);
     }
 
-    @PostMapping("regions")
+    @GetMapping("regions")
     public List<Region> getRegions(){
         return serviceRegion.allRegions();
     }

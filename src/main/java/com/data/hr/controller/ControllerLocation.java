@@ -23,7 +23,7 @@ public class ControllerLocation {
         return serviceLocation.update(location);
     }
 
-    @PostMapping("/location/{id}")
+    @GetMapping("/location/{id}")
     public Location getLocation(@PathVariable("id") int location_id){
         return serviceLocation.getById(location_id);
     }
@@ -33,7 +33,7 @@ public class ControllerLocation {
         return serviceLocation.delete(location_id);
     }
 
-    @PostMapping("/locations")
+    @GetMapping("/locations")
     public List<Location> getLocations(){
         return serviceLocation.allLocations();
     }
